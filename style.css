@@ -1,4 +1,28 @@
-html {
-  height: 100%;
-  width: 100%;
+body {
+    background-image: url('steak.jpg'); /* Путь к изображению стейка */
+    background-size: cover; /* Заполнение всей доступной области */
+    background-position: center; /* Центрирование изображения */
+}
+
+header {
+    background-color: rgba(255, 255, 255, 0.7); /* Прозрачный фон для заголовка */
+    padding: 20px;
+}
+
+main {
+    background-color: rgba(255, 255, 255, 0.8); /* Прозрачный фон для основного содержимого */
+    padding: 20px;
+    margin: 20px;
+}
+
+section {
+    background-color: rgba(255, 255, 255, 0.9); /* Прозрачный фон для каждого раздела с рецептом */
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: rgba(255, 255, 255, 0.7); /* Прозрачный фон для подвала */
+    padding: 10px;
+    text-align: center;
 }
