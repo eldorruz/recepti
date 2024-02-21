@@ -1,28 +1,42 @@
 body {
-    background-image: url('steak.jpg'); /* Путь к изображению стейка */
-    background-size: cover; /* Заполнение всей доступной области */
-    background-position: center; /* Центрирование изображения */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #aeebff; /* Голубой цвет фона */
 }
 
-header {
-    background-color: rgba(255, 255, 255, 0.7); /* Прозрачный фон для заголовка */
-    padding: 20px;
+header, footer {
+    background-color: transparent; /* Прозрачный фон для header и footer */
+    text-align: center;
+    padding: 20px 0;
 }
 
 main {
-    background-color: rgba(255, 255, 255, 0.8); /* Прозрачный фон для основного содержимого */
     padding: 20px;
-    margin: 20px;
 }
 
-section {
-    background-color: rgba(255, 255, 255, 0.9); /* Прозрачный фон для каждого раздела с рецептом */
+.recipe {
+    margin-bottom: 30px;
+    background-color: rgba(255, 255, 255, 0.5); /* Прозрачный белый фон для блока рецепта */
     padding: 20px;
-    margin-bottom: 20px;
+    border-radius: 10px; /* Закругленные углы */
 }
 
-footer {
-    background-color: rgba(255, 255, 255, 0.7); /* Прозрачный фон для подвала */
-    padding: 10px;
-    text-align: center;
+.recipe h2 {
+    color: #333;
+}
+
+.recipe ul, .recipe ol {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.recipe ol {
+    margin-left: 20px;
+}
+
+footer p {
+    font-size: 14px;
+    color: #666;
+}
 }
