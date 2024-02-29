@@ -1,14 +1,23 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #aeebff; /* Голубой цвет фона */
+    background-image: url('background.jpg'); /* Путь к вашему изображению фона */
+    background-size: cover;
+    background-position: center;
 }
 
 header, footer {
-    background-color: transparent; /* Прозрачный фон для header и footer */
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
     text-align: center;
     padding: 20px 0;
+}
+
+header h1 {
+    font-size: 36px;
+    margin: 0;
+    text-transform: uppercase;
 }
 
 main {
@@ -16,27 +25,37 @@ main {
 }
 
 .recipe {
+    background-color: rgba(255, 255, 255, 0.8);
     margin-bottom: 30px;
-    background-color: rgba(255, 255, 255, 0.5); /* Прозрачный белый фон для блока рецепта */
     padding: 20px;
-    border-radius: 10px; /* Закругленные углы */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .recipe h2 {
     color: #333;
+    margin-top: 0;
 }
 
-.recipe ul, .recipe ol {
-    margin-top: 5px;
+.recipe p, .recipe ul, .recipe ol {
     margin-bottom: 10px;
 }
 
-.recipe ol {
-    margin-left: 20px;
+.recipe ul, .recipe ol {
+    padding-left: 20px;
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
 }
 
 footer p {
+    margin: 0;
     font-size: 14px;
-    color: #666;
-}
 }
