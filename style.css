@@ -1,23 +1,19 @@
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url('background.jpg'); /* Путь к вашему изображению фона */
-    background-size: cover;
-    background-position: center;
+    background-color: #f0f8ff; /* Голубой цвет фона */
 }
 
-header, footer {
-    background-color: rgba(0, 0, 0, 0.7);
-    color: #fff;
+header {
+    background-color: #4682b4; /* Синий цвет фона для заголовка */
+    color: white;
     text-align: center;
-    padding: 20px 0;
+    padding: 20px;
 }
 
 header h1 {
-    font-size: 36px;
     margin: 0;
-    text-transform: uppercase;
 }
 
 main {
@@ -25,7 +21,7 @@ main {
 }
 
 .recipe {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: #fff; /* Белый цвет фона для рецепта */
     margin-bottom: 30px;
     padding: 20px;
     border-radius: 10px;
@@ -37,25 +33,19 @@ main {
     margin-top: 0;
 }
 
-.recipe p, .recipe ul, .recipe ol {
-    margin-bottom: 10px;
-}
-
 .recipe ul, .recipe ol {
     padding-left: 20px;
 }
 
 footer {
-    background-color: rgba(0, 0, 0, 0.7);
-    color: #fff;
+    background-color: #4682b4; /* Синий цвет фона для подвала */
+    color: white;
     text-align: center;
     padding: 10px 0;
     position: fixed;
     width: 100%;
     bottom: 0;
 }
-
-footer p {
-    margin: 0;
-    font-size: 14px;
+.content {
+    color: white; /* Белый цвет текста */
 }
