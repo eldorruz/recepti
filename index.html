@@ -5,47 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Простые рецепты завтраков</title>
     <link rel="stylesheet" href="styles.css">
-  <style>
-      body {
-        background-image: url('background.jpg');
-        background-size: cover;
-        background-position: center; /* Голубой цвет фона */
-          margin: 0;
-          padding: 0;
-      }
-      .content {
-          text-align: center;
-          padding: 50px;
-          color: white;
-      }
-  </style>
+    <style>
+        body {
+            background-image: url('background.jpg');
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+        }
+        .content {
+            text-align: center;
+            padding: 50px;
+            color: white;
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>Простые рецепты завтраков</h1>
     </header>
+    <div class="search-container">
+        <input type="text" id="searchInput" onkeyup="searchRecipes()" placeholder="Поиск по названию...">
+        <button onclick="openRecipeForm()">Добавить рецепт</button> <!-- Button to open recipe submission form -->
+    </div>
     <main>
-        <section class="recipe">
-            <h2>Омлет с помидорами</h2>
-            <p>Ингредиенты:</p>
-            <ul>
-                <li>Яйца - 3 шт.</li>
-                <li>Помидоры - 1 шт.</li>
-                <li>Соль, перец - по вкусу</li>
-                <li>Масло для жарки</li>
-            </ul>
-            <p>Инструкции:</p>
-            <ol>
-                <li>Разбейте яйца в миску, добавьте соль и перец, взбейте вилкой.</li>
-                <li>Нарежьте помидоры кубиками.</li>
-                <li>Разогрейте сковороду с маслом на среднем огне.</li>
-                <li>Вылейте в сковороду взбитые яйца, добавьте помидоры.</li>
-                <li>Жарьте омлет до готовности с обеих сторон.</li>
-                <li>Подавайте горячим.</li>
-            </ol>
+        <section class="recipe" data-category="омлет">
+          <h2>Омлет с помидорами</h2>
+          <p>Ингредиенты:</p>
+          <ul>
+              <li>Яйца - 3 шт.</li>
+              <li>Помидоры - 1 шт.</li>
+              <li>Соль, перец - по вкусу</li>
+              <li>Масло для жарки</li>
+          </ul>
+          <p>Инструкции:</p>
+          <ol>
+              <li>Разбейте яйца в миску, добавьте соль и перец, взбейте вилкой.</li>
+              <li>Нарежьте помидоры кубиками.</li>
+              <li>Разогрейте сковороду с маслом на среднем огне.</li>
+              <li>Вылейте в сковороду взбитые яйца, добавьте помидоры.</li>
+              <li>Жарьте омлет до готовности с обеих сторон.</li>
+              <li>Подавайте горячим.</li>
+          </ol>
         </section>
 
-        <section class="recipe">
+        <section class="recipe" data-category="гранола">
             <h2>Гранола с йогуртом и фруктами</h2>
             <p>Ингредиенты:</p>
             <ul>
@@ -64,7 +68,7 @@
             </ol>
         </section>
 
-        <section class="recipe">
+        <section class="recipe" data-category="тосты">
             <h2>Тосты с авокадо и яйцом</h2>
             <p>Ингредиенты:</p>
             <ul>
@@ -85,9 +89,140 @@
                 <li>Подавайте горячими.</li>
             </ol>
         </section>
+        <section class="recipe" data-category="омлет">
+            <h2>Омлет с шпинатом и сыром</h2>
+            <p>Ингредиенты:</p>
+            <ul>
+                <li>Яйца - 3 шт.</li>
+                <li>Шпинат - 100 г</li>
+                <li>Сыр - 50 г</li>
+                <li>Соль, перец - по вкусу</li>
+                <li>Масло для жарки</li>
+            </ul>
+            <p>Инструкции:</p>
+            <ol>
+                <li>Разбейте яйца в миску, добавьте соль и перец, взбейте вилкой.</li>
+                <li>Помойте и обсушите шпинат.</li>
+                <li>Нарежьте сыр кубиками.</li>
+                <li>Разогрейте сковороду с маслом на среднем огне.</li>
+                <li>Вылейте в сковороду взбитые яйца, добавьте шпинат и сыр.</li>
+                <li>Жарьте омлет до готовности с обеих сторон.</li>
+                <li>Подавайте горячим.</li>
+            </ol>
+        </section>
+
+        <section class="recipe" data-category="блины">
+            <h2>Блины с кленовым сиропом</h2>
+            <p>Ингредиенты:</p>
+            <ul>
+                <li>Мука - 1 стакан</li>
+                <li>Яйца - 2 шт.</li>
+                <li>Молоко - 1 стакан</li>
+                <li>Сахар - 2 ст. ложки</li>
+                <li>Клейковина - 2 ст. ложки</li>
+                <li>Разрыхлитель - 1 ч. ложка</li>
+                <li>Масло растительное для жарки</li>
+                <li>Кленовый сироп - для подачи</li>
+            </ul>
+            <p>Инструкции:</p>
+            <ol>
+                <li>В миске смешайте муку, сахар, клейковину и разрыхлитель.</li>
+                <li>В другой миске взбейте яйца и добавьте молоко.</li>
+                <li>Постепенно влейте жидкие ингредиенты в сухие, постоянно помешивая.</li>
+                <li>Разогрейте сковороду и смажьте ее маслом.</li>
+                <li>Вылейте тесто на сковороду и обжаривайте блины с обеих сторон до золотистой корки.</li>
+                <li>Подавайте с кленовым сиропом.</li>
+            </ol>
+        </section>
+
+        <section class="recipe" data-category="яичница">
+            <h2>Яичница с помидорами и зеленью</h2>
+            <p>Ингредиенты:</p>
+            <ul>
+                <li>Яйца - 2 шт.</li>
+                <li>Помидоры - 1 шт.</li>
+                <li>Зелень (укроп, петрушка) - по вкусу</li>
+                <li>Соль, перец - по вкусу</li>
+                <li>Масло для жарки</li>
+            </ul>
+            <p>Инструкции:</p>
+            <ol>
+                <li>Нарежьте помидоры кубиками.</li>
+                <li>Разогрейте сковороду с маслом на среднем огне.</li>
+                <li>Вылейте в сковороду яйца, посолите и поперчите.</li>
+                <li>Добавьте помидоры и зелень.</li>
+                <li>Подавайте горячим.</li>
+            </ol>
+        </section>
     </main>
     <footer>
         <p>© 2024 Простые рецепты завтраков</p>
     </footer>
+
+    <!-- Recipe Submission Form (Initially hidden) -->
+    <div id="recipeForm" style="display: none;">
+        <h2>Добавить свой рецепт</h2>
+        <form id="recipeSubmissionForm">
+            <label for="recipeTitle">Название рецепта:</label><br>
+            <input type="text" id="recipeTitle" name="recipeTitle"><br><br>
+            <label for="recipeIngredients">Ингредиенты:</label><br>
+            <textarea id="recipeIngredients" name="recipeIngredients" rows="4" cols="50"></textarea><br><br>
+            <label for="recipeInstructions">Инструкции:</label><br>
+            <textarea id="recipeInstructions" name="recipeInstructions" rows="4" cols="50"></textarea><br><br>
+            <input type="button" value="Добавить" onclick="submitRecipe()">
+        </form>
+    </div>
+
+    <script>
+        function searchRecipes() {
+            const input = document.getElementById("searchInput");
+            const filter = input.value.toUpperCase();
+            const recipes = document.querySelectorAll(".recipe");
+
+            recipes.forEach(recipe => {
+                const title = recipe.querySelector("h2").textContent.toUpperCase();
+                const category = recipe.getAttribute("data-category").toUpperCase();
+                if (title.indexOf(filter) > -1 || category.indexOf(filter) > -1) {
+                    recipe.style.display = "";
+                } else {
+                    recipe.style.display = "none";
+                }
+            });
+        }
+
+        function openRecipeForm() {
+            // Show the recipe submission form when the button is clicked
+            document.getElementById("recipeForm").style.display = "block";
+        }
+
+        function submitRecipe() {
+            // Retrieve input values
+            const title = document.getElementById("recipeTitle").value;
+            const ingredients = document.getElementById("recipeIngredients").value;
+            const instructions = document.getElementById("recipeInstructions").value;
+
+            // Create HTML elements for the new recipe
+            const newRecipe = document.createElement("section");
+            newRecipe.classList.add("recipe");
+            newRecipe.innerHTML = `
+                <h2>${title}</h2>
+                <p>Ингредиенты:</p>
+                <ul>${ingredients.split('\n').map(ingredient => `<li>${ingredient}</li>`).join('')}</ul>
+                <p>Инструкции:</p>
+                <ol>${instructions.split('\n').map(instruction => `<li>${instruction}</li>`).join('')}</ol>
+            `;
+
+            // Append the new recipe to the main section
+            document.querySelector("main").appendChild(newRecipe);
+
+            // Hide the recipe submission form
+            document.getElementById("recipeForm").style.display = "none";
+
+            // Clear input fields
+            document.getElementById("recipeTitle").value = "";
+            document.getElementById("recipeIngredients").value = "";
+            document.getElementById("recipeInstructions").value = "";
+        }
+    </script>
 </body>
 </html>
