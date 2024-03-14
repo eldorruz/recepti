@@ -18,6 +18,24 @@
             padding: 50px;
             color: white;
         }
+        .recipe-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.3);
+            border-radius: 10px;
+        }
+        .recipe-details {
+            flex: 1;
+            text-align: left;
+        }
+        .recipe-img {
+            width: 200px;
+            height: auto;
+            margin-left: 20px;
+        }
     </style>
 </head>
 <body>
@@ -29,27 +47,31 @@
         <button onclick="openRecipeForm()">Добавить рецепт</button> <!-- Button to open recipe submission form -->
     </div>
     <main>
-        <section class="recipe" data-category="омлет">
-          <h2>Омлет с помидорами</h2>
-          <p>Ингредиенты:</p>
-          <ul>
-              <li>Яйца - 3 шт.</li>
-              <li>Помидоры - 1 шт.</li>
-              <li>Соль, перец - по вкусу</li>
-              <li>Масло для жарки</li>
-          </ul>
-          <p>Инструкции:</p>
-          <ol>
-              <li>Разбейте яйца в миску, добавьте соль и перец, взбейте вилкой.</li>
-              <li>Нарежьте помидоры кубиками.</li>
-              <li>Разогрейте сковороду с маслом на среднем огне.</li>
-              <li>Вылейте в сковороду взбитые яйца, добавьте помидоры.</li>
-              <li>Жарьте омлет до готовности с обеих сторон.</li>
-              <li>Подавайте горячим.</li>
-          </ol>
+        <section class="recipe-container" data-category="омлет">
+          <div class="recipe-details">
+            <h2>Омлет с помидорами</h2>
+            <p>Ингредиенты:</p>
+            <ul>
+                <li>Яйца - 3 шт.</li>
+                <li>Помидоры - 1 шт.</li>
+                <li>Соль, перец - по вкусу</li>
+                <li>Масло для жарки</li>
+            </ul>
+            <p>Инструкции:</p>
+            <ol>
+                <li>Разбейте яйца в миску, добавьте соль и перец, взбейте вилкой.</li>
+                <li>Нарежьте помидоры кубиками.</li>
+                <li>Разогрейте сковороду с маслом на среднем огне.</li>
+                <li>Вылейте в сковороду взбитые яйца, добавьте помидоры.</li>
+                <li>Жарьте омлет до готовности с обеих сторон.</li>
+                <li>Подавайте горячим.</li>
+            </ol>
+          </div>
+          <img class="recipe-img" src="omlet.jpg" alt="Омлет с помидорами">
         </section>
 
-        <section class="recipe" data-category="гранола">
+        <section class="recipe-container" data-category="гранола">
+          <div class="recipe-details">
             <h2>Гранола с йогуртом и фруктами</h2>
             <p>Ингредиенты:</p>
             <ul>
@@ -66,9 +88,14 @@
                 <li>Повторите слои, заканчивая йогуртом сверху.</li>
                 <li>Подавайте сразу.</li>
             </ol>
+          </div>
+          <img class="recipe-img" src="granola.jpg" alt="Гранола с йогуртом и фруктами">
         </section>
 
-        <section class="recipe" data-category="тосты">
+        <!-- Добавьте остальные рецепты здесь -->
+
+        <section class="recipe-container" data-category="тосты">
+          <div class="recipe-details">
             <h2>Тосты с авокадо и яйцом</h2>
             <p>Ингредиенты:</p>
             <ul>
@@ -88,8 +115,12 @@
                 <li>Посолите и поперчите по вкусу.</li>
                 <li>Подавайте горячими.</li>
             </ol>
+          </div>
+          <img class="recipe-img" src="avocado_toast.jpg" alt="Тосты с авокадо и яйцом">
         </section>
-        <section class="recipe" data-category="омлет">
+
+        <section class="recipe-container" data-category="омлет">
+          <div class="recipe-details">
             <h2>Омлет с шпинатом и сыром</h2>
             <p>Ингредиенты:</p>
             <ul>
@@ -109,9 +140,12 @@
                 <li>Жарьте омлет до готовности с обеих сторон.</li>
                 <li>Подавайте горячим.</li>
             </ol>
+          </div>
+          <img class="recipe-img" src="spinach_omelette.jpg" alt="Омлет с шпинатом и сыром">
         </section>
 
-        <section class="recipe" data-category="блины">
+        <section class="recipe-container" data-category="блины">
+          <div class="recipe-details">
             <h2>Блины с кленовым сиропом</h2>
             <p>Ингредиенты:</p>
             <ul>
@@ -133,9 +167,12 @@
                 <li>Вылейте тесто на сковороду и обжаривайте блины с обеих сторон до золотистой корки.</li>
                 <li>Подавайте с кленовым сиропом.</li>
             </ol>
+          </div>
+          <img class="recipe-img" src="pancakes.jpg" alt="Блины с кленовым сиропом">
         </section>
 
-        <section class="recipe" data-category="яичница">
+        <section class="recipe-container" data-category="яичница">
+          <div class="recipe-details">
             <h2>Яичница с помидорами и зеленью</h2>
             <p>Ингредиенты:</p>
             <ul>
@@ -153,6 +190,8 @@
                 <li>Добавьте помидоры и зелень.</li>
                 <li>Подавайте горячим.</li>
             </ol>
+          </div>
+          <img class="recipe-img" src="fried_egg.jpg" alt="Яичница с помидорами и зеленью">
         </section>
     </main>
     <footer>
@@ -161,6 +200,7 @@
 
     <!-- Recipe Submission Form (Initially hidden) -->
     <div id="recipeForm" style="display: none;">
+        <!-- Форма добавления рецепта -->
         <h2>Добавить свой рецепт</h2>
         <form id="recipeSubmissionForm">
             <label for="recipeTitle">Название рецепта:</label><br>
@@ -177,7 +217,7 @@
         function searchRecipes() {
             const input = document.getElementById("searchInput");
             const filter = input.value.toUpperCase();
-            const recipes = document.querySelectorAll(".recipe");
+            const recipes = document.querySelectorAll(".recipe-container");
 
             recipes.forEach(recipe => {
                 const title = recipe.querySelector("h2").textContent.toUpperCase();
@@ -191,34 +231,38 @@
         }
 
         function openRecipeForm() {
-            // Show the recipe submission form when the button is clicked
+            // Показать форму добавления рецепта при нажатии на кнопку
             document.getElementById("recipeForm").style.display = "block";
         }
 
         function submitRecipe() {
-            // Retrieve input values
+            // Получение значений полей ввода
             const title = document.getElementById("recipeTitle").value;
             const ingredients = document.getElementById("recipeIngredients").value;
             const instructions = document.getElementById("recipeInstructions").value;
 
-            // Create HTML elements for the new recipe
+            // Создание HTML элементов для нового рецепта
             const newRecipe = document.createElement("section");
-            newRecipe.classList.add("recipe");
+            newRecipe.classList.add("recipe-container");
+            newRecipe.setAttribute("data-category", "новый");
             newRecipe.innerHTML = `
-                <h2>${title}</h2>
-                <p>Ингредиенты:</p>
-                <ul>${ingredients.split('\n').map(ingredient => `<li>${ingredient}</li>`).join('')}</ul>
-                <p>Инструкции:</p>
-                <ol>${instructions.split('\n').map(instruction => `<li>${instruction}</li>`).join('')}</ol>
+                <div class="recipe-details">
+                    <h2>${title}</h2>
+                    <p>Ингредиенты:</p>
+                    <ul>${ingredients.split('\n').map(ingredient => `<li>${ingredient}</li>`).join('')}</ul>
+                    <p>Инструкции:</p>
+                    <ol>${instructions.split('\n').map(instruction => `<li>${instruction}</li>`).join('')}</ol>
+                </div>
+                <img class="recipe-img" src="placeholder.jpg" alt="${title}">
             `;
 
-            // Append the new recipe to the main section
+            // Добавление нового рецепта в основную секцию
             document.querySelector("main").appendChild(newRecipe);
 
-            // Hide the recipe submission form
+            // Скрыть форму добавления рецепта
             document.getElementById("recipeForm").style.display = "none";
 
-            // Clear input fields
+            // Очистка полей ввода
             document.getElementById("recipeTitle").value = "";
             document.getElementById("recipeIngredients").value = "";
             document.getElementById("recipeInstructions").value = "";
